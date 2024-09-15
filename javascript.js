@@ -25,7 +25,7 @@ jogadorAtual = jogadorAtual === 'X' ? 'O' : 'X';
             });
         });
 
-//Meio , vitoria disponivel a partir da 5 jogada
+//Meio , vitoria definida pelo loop com as possiveis combinacoes
   
 function checarVitoria() {
   const combinacoesVitoria=
