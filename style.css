@@ -1,20 +1,26 @@
- #tabuleiro {
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            grid-template-rows: repeat(3, 100px);
-            gap: 5px;
-        }
-        .celula {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100px;
-            height: 100px;
-            border: 1px solid #000;
-            font-size: 24px;
-            cursor: pointer;
-            user-select: none;
-        }
-        .celula:hover {
-            background-color: #f0f0f0;
-        }
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    width: 1000px;
+    padding: 40px;
+    text-align: center;
+    
+}
+
+.quadrado{
+    width: 100px;
+    height: 100px;
+    font-size: 90px;
+    text-align: center;
+        
+}
+
+.jogo{
+    margin: 0 auto;
+}
+
+button{
+    margin-top: 8px;
+    text-align: center;
+}
