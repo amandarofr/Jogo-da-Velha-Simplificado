@@ -1,10 +1,20 @@
-.container{
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0; /* Cor de fundo da página */
+    background-image: linear-gradient(to bottom, #fff 0%, #fff 20%, #e1e1e1 20%, #e1e1e1 21%, #fff 21%, #fff 40%, #e1e1e1 40%, #e1e1e1 41%, #fff 41%, #fff 60%, #e1e1e1 60%, #e1e1e1 61%, #fff 61%, #fff 100%);
+    background-size: 100% 30px; /* Ajuste a altura das linhas */
+    background-repeat: repeat-y; /* Repete o fundo verticalmente */
+}
+.container{    
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
     width: 1000px;
     padding: 40px;
     text-align: center;
+    background-color: white;
     
 }
 
@@ -20,7 +30,16 @@
     margin: 0 auto;
 }
 
-button{
-    margin-top: 8px;
-    text-align: center;
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+button:hover {
+    background-color:#d9d1ba;
+}
+
