@@ -1,4 +1,5 @@
 let jogador = "X";
+const estadoJogo = ["", "", "", "", "", "", "", "", ""]; //Nova alteracao
 const combinacoesVitoria = [
     [0, 1, 2], 
     [3, 4, 5], 
@@ -9,18 +10,16 @@ const combinacoesVitoria = [
     [0, 4, 8], 
     [2, 4, 6]  
 ];
-//*Função de checar vitoria, através de um array feito pela classe .quadrado e validado através da variavel combinacoesVitoria
+
 function checarVitoria() {
-    const cells = Array.from(document.querySelectorAll('.quadrado'));
-    for (const combinacao of combinacoesVitoria) {
-        const [a, b, c] = combinacao;
-        if (cells[a].innerHTML && cells[a].innerHTML === cells[b].innerHTML && cells[a].innerHTML === cells[c].innerHTML) {
-            return cells[a].innerHTML;
-        }
-    }
-    return null;
+    return combinacoesVitoria
+        .map(combinacao => {
+            const [a, b, c] = combinacao;
+            return estadoJogo[a] && estadoJogo[a] === estadoJogo[b] && estadoJogo[a] === estadoJogo[c] ? estadoJogo[a] : null;
+        }) //Nova alteracao
+        .find(v => v) || null;
 }
-//*Função de mensagem quando há um ganhador
+
 function exibirMensagem(mensagem) {
     const mensagemElement = document.getElementById('mensagem');
     mensagemElement.textContent = mensagem;
@@ -28,21 +27,31 @@ function exibirMensagem(mensagem) {
 }
 
 function jogar(celula) {
-    if (celula.innerHTML === "") {
-        celula.innerHTML = jogador;
+    const index = Array.from(document.querySelectorAll('.quadrado')).indexOf(celula);
+    if (estadoJogo[index] === "") {
+        estadoJogo[index] = jogador;
+        celula.innerHTML = jogador; //nova alteracao
         const vencedor = checarVitoria();
         if (vencedor) {
             exibirMensagem(`Parabéns, jogador ${vencedor} ganhou!`);
             return; 
         }
 
-        
         jogador = jogador === "X" ? "O" : "X";
     }
 }
+
 function reiniciar() {
     document.querySelectorAll('.quadrado').forEach(celula => {
         celula.innerHTML = "";
     });
-    jogador = "X";}
+    estadoJogo.fill(""); // Nova alteracao
+    jogador = "X";
+    document.getElementById('mensagem').style.display = 'none'; 
+}
+
+window.addEventListener("load", function () {
+    document.querySelectorAll('.quadrado').forEach(quadrado => quadrado.addEventListener("click", (e) => jogar(quadrado)));
+    document.getElementById("botao").addEventListener("click", reiniciar);
+});
      
