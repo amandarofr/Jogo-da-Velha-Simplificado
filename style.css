@@ -2,10 +2,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #f0f0f0; /* Cor de fundo da página */
+    background-color: #f0f0f0; 
     background-image: linear-gradient(to bottom, #fff 0%, #fff 20%, #e1e1e1 20%, #e1e1e1 21%, #fff 21%, #fff 40%, #e1e1e1 40%, #e1e1e1 41%, #fff 41%, #fff 60%, #e1e1e1 60%, #e1e1e1 61%, #fff 61%, #fff 100%);
-    background-size: 100% 30px; /* Ajuste a altura das linhas */
-    background-repeat: repeat-y; /* Repete o fundo verticalmente */
+    background-size: 100% 30px; 
+    background-repeat: repeat-y; 
 }
 .container{    
     margin-left: auto;
