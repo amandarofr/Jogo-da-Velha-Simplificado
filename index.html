@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Velha</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
+    <title>Jogo da Velha - Tic Tac Toe</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="js.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Jogo da Velha - Tic Tac Toe </h1>
+        <h1>Jogo da Velha - Tic Tac Toe</h1>
         <table class="jogo" border="2">
             <tr>
-                <td class="quadrado" onclick="jogar(this)"></td>
-                <td class="quadrado" onclick="jogar(this)"></td>
-                <td class="quadrado" onclick="jogar(this)"></td>
+                <td class="quadrado"></td>
+                <td class="quadrado"></td>
+                <td class="quadrado"></td>
             </tr>
             <tr>
-                <td class="quadrado" onclick="jogar(this)"></td>
-                <td class="quadrado" onclick="jogar(this)"></td>
-                <td class="quadrado" onclick="jogar(this)"></td>
+                <td class="quadrado"></td>
+                <td class="quadrado"></td>
+                <td class="quadrado"></td>
             </tr>
             <tr>
-                <td class="quadrado" onclick="jogar(this)"></td>
-                <td class="quadrado" onclick="jogar(this)"></td>
-                <td class="quadrado" onclick="jogar(this)"></td>
+                <td class="quadrado"></td>
+                <td class="quadrado"></td>
+                <td class="quadrado"></td>
             </tr>
         </table>
         </div>
-        <button onClick="reiniciar()">Reiniciar Jogo</button>
-        <div id="mensagem" style="display: none; margin-top: 20px; text-align: center;"></div>
+        <button id="botao">Reiniciar Jogo</button>
+        <div id="mensagem"></div>
 </body>
 </html>
